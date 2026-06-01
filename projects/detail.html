@@ -41,7 +41,7 @@
             </div>
             
             <div class="col-lg-9 photos" id="gallery-container">
-                </div>
+            </div>
         </div>
     </div>
 
@@ -62,68 +62,94 @@
                     document.getElementById('project-location').innerText = project.location ? `Location: ${project.location}` : '';
                     document.getElementById('project-desc').innerText = project.description || '';
 
-                    // Lắp ráp Gallery
+                    // Thuật toán tự động lắp ráp Gallery
                     const container = document.getElementById('gallery-container');
+                    const images = project.gallery || [];
                     let htmlContent = '';
+                    let i = 0;
                     
-                    if(project.layout_blocks) {
-                        project.layout_blocks.forEach(block => {
-                            
-                            // Render Khối 1 ảnh
-                            if(block.type === 'full_width') {
-                                htmlContent += `
-                                <div class="row">
-                                    <div class="col-md-12 p-1 text-center">
-                                        <a data-src="${block.image}" data-fancybox="gallery">
-                                            <img src="${block.image}" style="width: 1010px;" class="img-fluid">
+                    while (i < images.length) {
+                        // Nhịp 1: 1 Ảnh To
+                        if (i % 6 === 0) {
+                            htmlContent += `
+                            <div class="row">
+                                <div class="col-md-12 p-1 text-center">
+                                    <a data-src="${images[i]}" data-fancybox="gallery">
+                                        <img src="${images[i]}" style="width: 1010px;" class="img-fluid">
+                                    </a>
+                                </div>
+                            </div>`;
+                            i += 1;
+                        }
+                        // Nhịp 2: 2 Ảnh Bằng Nhau
+                        else if (i % 6 === 1 && i + 1 < images.length) {
+                            htmlContent += `
+                            <div class="row">
+                                <div class="col-md-6 p-1">
+                                    <a data-src="${images[i]}" data-fancybox="gallery">
+                                        <img src="${images[i]}" class="img-fluid img-vertical float-end">
+                                    </a>
+                                </div>
+                                <div class="col-md-6 p-1">
+                                    <a data-src="${images[i+1]}" data-fancybox="gallery">
+                                        <img src="${images[i+1]}" class="img-fluid img-vertical float-start">
+                                    </a>
+                                </div>
+                            </div>`;
+                            i += 2;
+                        }
+                        // Nhịp 3: 1 Ảnh To
+                        else if (i % 6 === 3) {
+                            htmlContent += `
+                            <div class="row">
+                                <div class="col-md-12 p-1 text-center">
+                                    <a data-src="${images[i]}" data-fancybox="gallery">
+                                        <img src="${images[i]}" style="width: 1010px;" class="img-fluid">
+                                    </a>
+                                </div>
+                            </div>`;
+                            i += 1;
+                        }
+                        // Nhịp 4: Khối So Le (1 To, 2 Nhỏ)
+                        else if (i % 6 === 4 && i + 2 < images.length) {
+                            htmlContent += `
+                            <div class="row">
+                                <div class="col-md-6 p-1">
+                                    <a data-src="${images[i]}" data-fancybox="gallery">
+                                        <img src="${images[i]}" class="img-fluid float-end">
+                                    </a>
+                                </div>
+                                <div class="col-md-6 p-1 float-start">
+                                    <div class="h-50">
+                                        <a data-src="${images[i+1]}" data-fancybox="gallery">
+                                            <img src="${images[i+1]}" class="img-fluid img-horizontal">
                                         </a>
                                     </div>
-                                </div>`;
-                            }
-                            
-                            // Render Khối 2 ảnh bằng nhau
-                            else if (block.type === 'half_width') {
-                                htmlContent += `
-                                <div class="row">
-                                    <div class="col-md-6 p-1">
-                                        <a data-src="${block.image_left}" data-fancybox="gallery">
-                                            <img src="${block.image_left}" class="img-fluid float-end">
+                                    <div class="h-50 pt-2">
+                                        <a data-src="${images[i+2]}" data-fancybox="gallery">
+                                            <img src="${images[i+2]}" class="img-fluid img-horizontal">
                                         </a>
                                     </div>
-                                    <div class="col-md-6 p-1">
-                                        <a data-src="${block.image_right}" data-fancybox="gallery">
-                                            <img src="${block.image_right}" class="img-fluid float-start">
-                                        </a>
-                                    </div>
-                                </div>`;
-                            }
-
-                            // Render Khối So le (1 to, 2 nhỏ)
-                            else if (block.type === 'asymmetric') {
-                                htmlContent += `
-                                <div class="row">
-                                    <div class="col-md-6 p-1">
-                                        <a data-src="${block.image_main}" data-fancybox="gallery">
-                                            <img src="${block.image_main}" class="img-fluid float-end">
-                                        </a>
-                                    </div>
-                                    <div class="col-md-6 p-1 float-start">
-                                        <div class="h-50">
-                                            <a data-src="${block.image_sub1}" data-fancybox="gallery">
-                                                <img src="${block.image_sub1}" class="img-fluid img-horizontal">
-                                            </a>
-                                        </div>
-                                        <div class="h-50 pt-2">
-                                            <a data-src="${block.image_sub2}" data-fancybox="gallery">
-                                                <img src="${block.image_sub2}" class="img-fluid img-horizontal">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>`;
-                            }
-                        });
+                                </div>
+                            </div>`;
+                            i += 3;
+                        }
+                        // Xử lý ảnh lẻ: Nếu cuối mảng bị dư không đủ bộ, đổ thành 1 Ảnh To
+                        else {
+                            htmlContent += `
+                            <div class="row">
+                                <div class="col-md-12 p-1 text-center">
+                                    <a data-src="${images[i]}" data-fancybox="gallery">
+                                        <img src="${images[i]}" style="width: 1010px;" class="img-fluid">
+                                    </a>
+                                </div>
+                            </div>`;
+                            i += 1;
+                        }
                     }
                     container.innerHTML = htmlContent;
+                } else {
+                    document.getElementById('gallery-container').innerHTML = "<p class='text-center mt-5'>Không tìm thấy dự án.</p>";
                 }
             });
     </script>

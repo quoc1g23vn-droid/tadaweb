@@ -87,7 +87,7 @@
                 // Lặp qua từng dự án và tạo mã HTML
                 const htmlContent = projects.map(project => `
                     <div class="col-md-4">
-                        <a href="/projects/${project.id}">
+                       <a href="/projects/detail.html?id=${project.id}">
                             <img src="${project.thumbnail}" class="img-fluid" alt="${project.title}">
                             <span class="bg-desc"></span>
                             <span class="desc overflow-hidden position-absolute top-50 start-50 translate-middle text-white">
