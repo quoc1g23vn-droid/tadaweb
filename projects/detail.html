@@ -13,6 +13,23 @@
     <link href="/assets/css/project.css" rel="stylesheet">
     <style>
         .fancybox__backdrop { background: var(--fancybox-bg, rgba(24, 24, 27, .98)); }
+        
+        /* CHỐNG MÉO ẢNH VÀ CỐ ĐỊNH KHUNG HÌNH */
+        #gallery-container img {
+            object-fit: cover; /* Cắt cúp tự động lấp đầy khung, không bao giờ bị bóp méo */
+            width: 100%;
+            border-radius: 2px;
+        }
+        
+        /* Khống chế tỷ lệ đứng cho khối 2 ảnh chia đôi */
+        .img-vertical {
+            aspect-ratio: 2/3; 
+        }
+        
+        /* Ép lấp đầy chiều cao cho các ảnh nhỏ trong khối so le */
+        .img-horizontal {
+            height: 100%; 
+        }
     </style>
 </head>
 
