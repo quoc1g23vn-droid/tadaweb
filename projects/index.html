@@ -13,7 +13,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300&display=swap" rel="stylesheet">
     <link href="/assets/css/styles.css" rel="stylesheet">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-427ELYXSX3"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -24,8 +23,6 @@
     </script>
     <style>
         .desc {
-            /* opacity: 0; */
-
             z-index: 100;
             display: none;
             width: 100%;
@@ -36,7 +33,6 @@
             display: none;
             top: 0px;
             position: absolute;
-
             height: 100%;
             width: 100%;
             background-color: rgba(0, 0, 0, 0.7);
@@ -50,12 +46,10 @@
 
         a:hover>.desc {
             display: block;
-
         }
 
         a:hover>.bg-desc {
             display: block;
-
         }
     </style>
 </head>
@@ -76,127 +70,37 @@
             </div>
         </div>
     </nav>
+
     <div class="container" style="margin-top: 70px;">
-        <div class="row gx-1 mt-1">
-            <div class="col-md-4">
-                <a href="/projects/the-clay-resort">
-                    <img src="/assets/projects/14-the-clay-resort/00.Front-Page.JPG" style="height:644px;" class="img-fluid"
-                        alt="Cao Lanh House">
-                    <span class="bg-desc"></span>
-                    <span class="desc overflow-hidden position-absolute top-50 start-50 translate-middle text-white">
-                        The Clay Mũi Né Resort | 2023</span>
-                </a>
+        <div class="row gx-1 gy-1 mt-1" id="projects-container">
             </div>
-            <div class="col-md-4">
-                <a href="/projects/mang-diang-hotel">
-                    <img src="/assets/projects/13-mang-diang-hotel/21_.JPG" class="img-fluid" alt="Chi's House">
-                    <span class="bg-desc"></span>
-                    <span class="desc overflow-hidden position-absolute top-50 start-50 translate-middle text-white">
-                        Măng Diang Hotel | 2023</span>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="/projects/xa-cafe"><img src="/assets/projects/12-xa-cafe/21.JPG" class="img-fluid"
-                        alt="Xa Cafe">
-                    <span class="bg-desc"></span>
-                    <span class="desc overflow-hidden position-absolute top-50 start-50 translate-middle text-white">
-                        Xã Cafe | 2023</span>
-                </a>
-            </div>
-        </div>
-        <div class="row gx-1 mt-1">
-            <div class="col-md-4">
-                <a href="/projects/cao-lanh-house">
-                    <img src="/assets/projects/11-cao-lanh-house/14.jpg" style="height:644px;" class="img-fluid"
-                        alt="Cao Lanh House">
-                    <span class="bg-desc"></span>
-                    <span class="desc overflow-hidden position-absolute top-50 start-50 translate-middle text-white">
-                        Cao Lanh House | 2021</span>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="/projects/chi-house">
-                    <img src="/assets/projects/00-front-page/10-ChiB.jpg" class="img-fluid" alt="Chi's House">
-                    <span class="bg-desc"></span>
-                    <span class="desc overflow-hidden position-absolute top-50 start-50 translate-middle text-white">
-                        Chi's House | 2021</span>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="/projects/la-memoria"><img src="/assets/projects/00-front-page/09-LaMemoria.jpg"
-                        class="img-fluid" alt="La Memoria">
-                    <span class="bg-desc"></span>
-                    <span class="desc overflow-hidden position-absolute top-50 start-50 translate-middle text-white">La
-                        Memoria Hotel | 2020</span>
-                </a>
-            </div>
-        </div>
-        <div class="row gx-1 mt-1">
-            <div class="col-md-4">
-                <a href="/projects/lagom-hus">
-                    <img src="/assets/projects/00-front-page/08-Lagom_Exterior4.jpg" class="img-fluid" alt="Lagom">
-                    <span class="bg-desc"></span>
-                    <span class="desc overflow-hidden position-absolute top-50 start-50 translate-middle text-white">
-                        Lagom Hus | 2020</span>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="/projects/lai-day-2"><img src="/assets/projects/00-front-page/07-LaidayRefill2_Shelf2.jpg"
-                        class="img-fluid" alt="Laiday 2">
-                    <span class="bg-desc"></span>
-                    <span class="desc overflow-hidden position-absolute top-50 start-50 translate-middle text-white">
-                        Laiday Refill Station 2 | 2019</span>
-                </a>
-            </div>           
-            <div class="col-md-4">
-                <a href="/projects/lai-day-1"><img src="/assets/projects/00-front-page/06-LaiDayRefill.jpg"
-                        class="img-fluid" alt="Laiday 1">
-                    <span class="bg-desc"></span>
-                    <span class="desc overflow-hidden position-absolute top-50 start-50 translate-middle text-white">
-                        Laiday Refill Station 1 | 2018</span>
-                </a>
-            </div>
-        </div>
-        <div class="row gx-1 mt-1"> 
-            <div class="col-md-4">
-                <a href="/projects/irh"><img src="/assets/projects/00-front-page/04-InterativehHouse_Exterior01.jpg"
-                        class="img-fluid" alt="Interactive House">
-                    <span class="bg-desc"></span>
-                    <span class="desc overflow-hidden position-absolute top-50 start-50 translate-middle text-white">
-                        Interactive House | 2018</span>
-                </a>
-            </div>
-            <div class="col-md-4">
-                <a href="/projects/anh-viet-kindergarten">
-                    <img src="/assets/projects/00-front-page/03-AnhVietKindergarten.jpg" class="img-fluid"
-                        alt="Anh Viet Kindergarten">
-                    <span class="bg-desc"></span>
-                    <span class="desc overflow-hidden position-absolute top-50 start-50 translate-middle text-white">
-                        AnhViet Kindergarten | 2018</span>
-                </a>
-            </div>
-
-            <div class="col-md-4">
-                <a href="/projects/medic-store"><img src="/assets/projects/00-front-page/02-MedicStore_Exterior1.jpg"
-                        class="img-fluid" alt="Medic Store">
-                    <span class="bg-desc"></span>
-                    <span class="desc overflow-hidden position-absolute top-50 start-50 translate-middle text-white">
-                        SonHuong Medic Store | 2017</span>
-                </a>
-            </div>
-        </div>
-
-        <div class="row gx-1 mt-1">
-            <div class="col-md-4">
-                <a href="/projects/urban-house"><img src="/assets/projects/00-front-page/01-Urbanhouse_Exterior.jpg"
-                        class="img-fluid" alt="Urban House">
-                    <span class="bg-desc"></span>
-                    <span class="desc overflow-hidden position-absolute top-50 start-50 translate-middle text-white">
-                        Urban Houses | 2017</span>
-                </a>
-            </div>
-        </div>
-
     </div>
 
+    <script>
+        fetch('/projects.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('projects-container');
+                // Lấy mảng items từ JSON (theo đúng chuẩn cấu hình Decap CMS)
+                const projects = data.items || []; 
+                
+                // Lặp qua từng dự án và tạo mã HTML
+                const htmlContent = projects.map(project => `
+                    <div class="col-md-4">
+                        <a href="/projects/${project.id}">
+                            <img src="${project.thumbnail}" class="img-fluid" alt="${project.title}">
+                            <span class="bg-desc"></span>
+                            <span class="desc overflow-hidden position-absolute top-50 start-50 translate-middle text-white">
+                                ${project.title} | ${project.year}
+                            </span>
+                        </a>
+                    </div>
+                `).join('');
+
+                container.innerHTML = htmlContent;
+            })
+            .catch(error => console.error('Lỗi tải danh sách dự án:', error));
+    </script>
+
+</body>
 </html>
