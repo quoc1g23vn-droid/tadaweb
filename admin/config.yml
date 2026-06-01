@@ -9,18 +9,23 @@ collections:
   - name: "projects"
     label: "Danh sách Dự án"
     files:
-      - label: "Các dự án"
+      - label: "Tất cả dự án"
         name: "project_list"
         file: "projects.json"
         fields:
-          - {label: "ID Dự án", name: "id", widget: "string"}
-          - {label: "Tên dự án", name: "title", widget: "string"}
-          - {label: "Năm hoàn thành", name: "year", widget: "string"}
-          - {label: "Địa điểm", name: "location", widget: "string", required: false}
-          - {label: "Mô tả", name: "description", widget: "text", required: false}
-          - {label: "Ảnh bìa", name: "thumbnail", widget: "image"}
-          # Nơi tải lên hàng loạt ảnh chi tiết
-          - label: "Tải lên toàn bộ ảnh chi tiết (Gallery)"
-            name: "gallery"
+          - label: "Danh sách"
+            name: "items"
             widget: "list"
-            field: {label: "Ảnh", name: "image", widget: "image"}
+            # ĐÂY LÀ DÒNG THẦN THÁNH GIÚP HIỂN THỊ TÊN DỰ ÁN TRÊN ADMIN:
+            summary: '{{title}} ({{year}})' 
+            fields:
+              - {label: "ID Dự án", name: "id", widget: "string"}
+              - {label: "Tên dự án", name: "title", widget: "string"}
+              - {label: "Năm hoàn thành", name: "year", widget: "string"}
+              - {label: "Địa điểm", name: "location", widget: "string", required: false}
+              - {label: "Mô tả", name: "description", widget: "text", required: false}
+              - {label: "Ảnh bìa", name: "thumbnail", widget: "image"}
+              - label: "Tải lên toàn bộ ảnh chi tiết (Gallery)"
+                name: "gallery"
+                widget: "list"
+                field: {label: "Ảnh", name: "image", widget: "image"}
