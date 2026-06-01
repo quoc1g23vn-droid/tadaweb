@@ -1,15 +1,13 @@
 backend:
   name: git-gateway
-  branch: main # Nhánh trên GitHub của bạn
+  branch: main
 
-# Nơi CMS sẽ lưu ảnh khi bạn bấm Upload
 media_folder: "assets/projects"
 public_folder: "/assets/projects"
 
 collections:
   - name: "projects"
     label: "Danh sách Dự án"
-    # Cấu hình để CMS ghi thẳng dữ liệu vào file projects.json
     files:
       - label: "Các dự án"
         name: "project_list"
@@ -19,7 +17,38 @@ collections:
             name: "items"
             widget: "list"
             fields:
-              - {label: "ID Dự án (VD: zen-tea-house)", name: "id", widget: "string"}
+              - {label: "ID Dự án", name: "id", widget: "string"}
               - {label: "Tên dự án", name: "title", widget: "string"}
               - {label: "Năm hoàn thành", name: "year", widget: "string"}
+              - {label: "Địa điểm", name: "location", widget: "string", required: false}
+              - {label: "Mô tả", name: "description", widget: "text", required: false}
               - {label: "Ảnh bìa", name: "thumbnail", widget: "image"}
+              
+              # HỆ THỐNG XÂY DỰNG BỐ CỤC (LAYOUT BUILDER)
+              - label: "Nội dung Gallery (Xây dựng bố cục)"
+                name: "layout_blocks"
+                widget: "list"
+                types:
+                  # Kiểu 1: Một ảnh to toàn màn hình
+                  - label: "Khối 1 Ảnh lớn (Toàn chiều rộng)"
+                    name: "full_width"
+                    widget: "object"
+                    fields:
+                      - {label: "Ảnh", name: "image", widget: "image"}
+                  
+                  # Kiểu 2: Hai ảnh chia đôi màn hình
+                  - label: "Khối 2 Ảnh (Chia đôi 50/50)"
+                    name: "half_width"
+                    widget: "object"
+                    fields:
+                      - {label: "Ảnh Trái", name: "image_left", widget: "image"}
+                      - {label: "Ảnh Phải", name: "image_right", widget: "image"}
+                  
+                  # Kiểu 3: Khối so le (1 to, 2 nhỏ)
+                  - label: "Khối So le (1 Ảnh lớn + 2 Ảnh nhỏ)"
+                    name: "asymmetric"
+                    widget: "object"
+                    fields:
+                      - {label: "Ảnh lớn (Bên trái)", name: "image_main", widget: "image"}
+                      - {label: "Ảnh nhỏ 1 (Góc trên phải)", name: "image_sub1", widget: "image"}
+                      - {label: "Ảnh nhỏ 2 (Góc dưới phải)", name: "image_sub2", widget: "image"}
