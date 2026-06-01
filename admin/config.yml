@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+  branch: main # Nhánh trên GitHub của bạn
+
+# Nơi CMS sẽ lưu ảnh khi bạn bấm Upload
+media_folder: "assets/projects"
+public_folder: "/assets/projects"
+
+collections:
+  - name: "projects"
+    label: "Danh sách Dự án"
+    # Cấu hình để CMS ghi thẳng dữ liệu vào file projects.json
+    files:
+      - label: "Các dự án"
+        name: "project_list"
+        file: "projects.json"
+        fields:
+          - label: "Danh sách"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "ID Dự án (VD: zen-tea-house)", name: "id", widget: "string"}
+              - {label: "Tên dự án", name: "title", widget: "string"}
+              - {label: "Năm hoàn thành", name: "year", widget: "string"}
+              - {label: "Ảnh bìa", name: "thumbnail", widget: "image"}
