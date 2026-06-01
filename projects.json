@@ -17,31 +17,6 @@
       "title": "Xã Cafe",
       "year": "2023",
       "thumbnail": "/assets/projects/12-xa-cafe/21.JPG"
-    },
-    {
-      "id": "1",
-      "title": "2",
-      "year": "3",
-      "thumbnail": "https://magnificent-shortbread-2438fa.netlify.app/assets/projects/14-the-clay-resort/00.Front-Page.JPG"
-    },
-    {
-      "id": "3",
-      "title": "4",
-      "year": "5",
-      "location": "6",
-      "description": "ádsdasdasdasdsdasdasd",
-      "thumbnail": "/assets/projects/screenshot_1780317469.png",
-      "layout_blocks": [
-        {
-          "type": "full_width",
-          "image": "/assets/projects/screenshot_1780317469.png"
-        },
-        {
-          "type": "half_width",
-          "image_left": "/assets/projects/screenshot_1780317469.png",
-          "image_right": "/assets/projects/screenshot_1780317469.png"
-        }
-      ]
     }
   ]
 }
