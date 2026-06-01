@@ -1,3 +1,22 @@
 {
-  "items": []
+  "items": [
+    {
+      "id": "the-clay-resort",
+      "title": "The Clay Mũi Né Resort",
+      "year": "2023",
+      "thumbnail": "/assets/projects/14-the-clay-resort/00.Front-Page.JPG"
+    },
+    {
+      "id": "mang-diang-hotel",
+      "title": "Măng Diang Hotel",
+      "year": "2023",
+      "thumbnail": "/assets/projects/13-mang-diang-hotel/21_.JPG"
+    },
+    {
+      "id": "xa-cafe",
+      "title": "Xã Cafe",
+      "year": "2023",
+      "thumbnail": "/assets/projects/12-xa-cafe/21.JPG"
+    }
+  ]
 }
