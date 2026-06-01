@@ -19,28 +19,17 @@
       "thumbnail": "/assets/projects/12-xa-cafe/21.JPG"
     },
     {
-      "id": "1",
-      "title": "2",
-      "year": "3",
-      "thumbnail": "https://magnificent-shortbread-2438fa.netlify.app/assets/projects/14-the-clay-resort/00.Front-Page.JPG"
-    },
-    {
-      "id": "3",
-      "title": "4",
-      "year": "5",
-      "location": "6",
-      "description": "ádsdasdasdasdsdasdasd",
-      "thumbnail": "/assets/projects/screenshot_1780317469.png",
-      "layout_blocks": [
-        {
-          "type": "full_width",
-          "image": "/assets/projects/screenshot_1780317469.png"
-        },
-        {
-          "type": "half_width",
-          "image_left": "/assets/projects/screenshot_1780317469.png",
-          "image_right": "/assets/projects/screenshot_1780317469.png"
-        }
+      "id": "nha2",
+      "title": "nha2aaa",
+      "year": "2026",
+      "location": "tp hcm",
+      "description": "Located in Southeast Vietnam, Phan Thiet City is renowned for its beautiful beaches, white sand, and year-round warm sunshine. Situated ideally close to the city center, the construction land was initially an old resort built over 20 years ago on terrain sloping towards the sea.\n\nRecognizing the land's great potential, we decided to leverage its existing advantages and incorporate improvements to create a new, harmonious, and friendly resort. We considered using local materials and appropriate construction methods. The goal is to create a welcoming space that respects the site's existing values while leaving room for new ideas.\n\nThe project is designed in harmony with the natural terrain by balancing excavation and landfilling, retaining most of the existing coconut trees. The main materials include easily recyclable resources such as stone, wood, steel, and unbaked bricks. To minimize the extraction of new resources, we reused some stones and wood from old structures. The row of villas along the boundary wall was also kept intact to be renovated into new villa clusters.\n\nInstead of constructing a large structure, we divided the buildings into smaller structures, creating the feeling of a small community cluster. The central swimming pool serves as a key landscape feature and a focal point for activities. The accommodation clusters are arranged around the pool, creating an open and communal space.\n\nWe hope this project will be a testament to a slow, gentle lifestyle while still providing a new experience, akin to a \"village within the city\"—something that is gradually disappearing in many urban areas in Vietnam today.",
+      "thumbnail": "https://www.tad-a.vn/assets/projects/14-the-clay-resort/0-Master-plan.JPG",
+      "gallery": [
+        "https://www.tad-a.vn/assets/projects/14-the-clay-resort/2.Site-Plan.JPG",
+        "https://www.tad-a.vn/assets/projects/14-the-clay-resort/11c-Reception-block-NR.JPG",
+        "https://www.tad-a.vn/assets/projects/14-the-clay-resort/13b-Reception-block-NR.JPG",
+        "https://www.tad-a.vn/assets/projects/14-the-clay-resort/13b-Reception-block-NR.JPG"
       ]
     }
   ]
